@@ -37,18 +37,18 @@ import static org.mockito.Mockito.when;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(loader = AnnotationConfigContextLoader.class)
-public class ResourceByteArrayFileAbstractionTest {
+public class ResourceByteArrayFileAbstractionImplTest {
 	@Configuration
 	static class ContextConfiguration {
 
 	}
 
 	private static String MOCK_PATH = "/etc/file.txt";
-	private ResourceByteArrayFileAbstraction mFileAbstraction;
+	private ResourceByteArrayFileAbstractionImpl mFileAbstraction;
 
 	@Before
 	public void setUp() throws Exception {
-		mFileAbstraction = new ResourceByteArrayFileAbstraction();
+		mFileAbstraction = new ResourceByteArrayFileAbstractionImpl();
 	}
 
 	@Test
@@ -65,6 +65,7 @@ public class ResourceByteArrayFileAbstractionTest {
 	}
 
 	@Test
+	@SuppressWarnings("unchecked")
 	public void shouldSetFileTransformationAlgorithm() throws Exception {
 		FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>> fileTransformationAlgorithm =
 				(FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>>)

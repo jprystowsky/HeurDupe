@@ -1,59 +1,43 @@
+/*
+ * Copyright 2013 Jacob Miles Prystowsky
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package io.mapping.apps.heurdupe.file;
 
 import io.mapping.apps.heurdupe.algorithm.FileTransformationAlgorithm;
 import io.mapping.apps.heurdupe.algorithm.FileTransformationAlgorithmData;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.io.InputStream;
 
-@Component
-public class ResourceByteArrayFileAbstraction implements FileAbstraction<Resource, byte[]> {
-	private Resource mResource;
-
-	@Autowired private FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>> mFileTransformationAlgorithm;
+public interface ResourceByteArrayFileAbstraction extends FileAbstraction<Resource, byte[]> {
+	@Override
+	FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>> getFileTransformationAlgorithm();
 
 	@Override
-	public FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>> getFileTransformationAlgorithm() {
-		return mFileTransformationAlgorithm;
-	}
+	void setFileTransformationAlgorithm(FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>> fileTransformationAlgorithm);
 
 	@Override
-	public void setFileTransformationAlgorithm(final FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>> fileTransformationAlgorithm) {
-		this.mFileTransformationAlgorithm = fileTransformationAlgorithm;
-	}
+	String getPath() throws IOException;
 
 	@Override
-	public String getPath() throws IOException {
-		return mResource.getFilename();
-	}
+	byte[] getAbstraction() throws IOException;
 
 	@Override
-	public byte[] getAbstraction() throws IOException {
-		byte[] representation = null;
-
-		InputStream stream = mResource.getInputStream();
-
-		try {
-			mFileTransformationAlgorithm.setInputStream(stream);
-			representation = mFileTransformationAlgorithm.transform().getAbstraction();
-		} catch (IOException e) {
-			throw e;
-		} finally {
-			stream.close();
-			return representation;
-		}
-	}
+	Resource getBacking();
 
 	@Override
-	public Resource getBacking() {
-		return mResource;
-	}
-
-	@Override
-	public void setBacking(final Resource backing) {
-		this.mResource = backing;
-	}
+	void setBacking(Resource backing);
 }
