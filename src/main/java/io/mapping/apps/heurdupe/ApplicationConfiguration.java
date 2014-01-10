@@ -1,7 +1,7 @@
 package io.mapping.apps.heurdupe;
 
-import io.mapping.apps.heurdupe.file.FileAbstraction;
 import io.mapping.apps.heurdupe.file.FileAbstractionCreator;
+import io.mapping.apps.heurdupe.file.ResourceByteArrayFileAbstraction;
 import io.mapping.apps.heurdupe.file.ResourceByteArrayFileAbstractionImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
@@ -13,15 +13,16 @@ public class ApplicationConfiguration {
 
 	@Bean
 	@Scope(value = "prototype")
-	public FileAbstraction<Resource, byte[]> springResourceFileAbstraction() {
-		return new ResourceByteArrayFileAbstractionImpl();
+	@SuppressWarnings("unchecked")
+	public <T extends ResourceByteArrayFileAbstraction> T springResourceFileAbstraction() {
+		return (T) new ResourceByteArrayFileAbstractionImpl();
 	}
 
 	@Bean
-	public FileAbstractionCreator<Resource, byte[]> fileAbstractionCreator() {
-		return new FileAbstractionCreator<Resource, byte[]>() {
+	public FileAbstractionCreator<Resource, byte[], ResourceByteArrayFileAbstraction> fileAbstractionCreator() {
+		return new FileAbstractionCreator<Resource, byte[], ResourceByteArrayFileAbstraction>() {
 			@Override
-			public FileAbstraction<Resource, byte[]> createFileAbstraction() {
+			public ResourceByteArrayFileAbstraction createFileAbstraction() {
 				return springResourceFileAbstraction();
 			}
 		};
