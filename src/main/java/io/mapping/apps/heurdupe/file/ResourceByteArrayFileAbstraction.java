@@ -22,7 +22,7 @@ import org.springframework.core.io.Resource;
 
 import java.io.IOException;
 
-public interface ResourceByteArrayFileAbstraction extends FileAbstraction<Resource, byte[]> {
+public interface ResourceByteArrayFileAbstraction extends FileAbstraction<Resource, byte[]>, Comparable<ResourceByteArrayFileAbstraction> {
 	@Override
 	FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>> getFileTransformationAlgorithm();
 
@@ -40,4 +40,7 @@ public interface ResourceByteArrayFileAbstraction extends FileAbstraction<Resour
 
 	@Override
 	void setBacking(Resource backing);
+
+	@Override
+	int compareTo(ResourceByteArrayFileAbstraction o);
 }

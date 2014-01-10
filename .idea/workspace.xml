@@ -1000,7 +1000,7 @@
       <workItem from="1388762798682" duration="595000" />
       <workItem from="1388978289755" duration="2938000" />
       <workItem from="1389320953074" duration="17000" />
-      <workItem from="1389321006446" duration="7395000" />
+      <workItem from="1389321006446" duration="7459000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1386440696362</created>
@@ -1014,11 +1014,15 @@
       <created>1386546830255</created>
       <updated>1386546830255</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Injecting the creator of file abstractions.">
+      <created>1389388367478</created>
+      <updated>1389388367478</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39826000" />
+    <option name="totallyTimeSpent" value="39890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1111" extended-state="6" />
@@ -1073,7 +1077,8 @@
     <MESSAGE value="Initial commit&#10;" />
     <MESSAGE value="Adding .idea dir for project management" />
     <MESSAGE value="Making ResourceByteArrayFileAbstraction itself an interface, extending FileAbstraction. The concrete implementation is then ResourceByteArrayFileAbstractionImpl. (Yes, I know the names are long and could be better.) This allows further decoupling for appropriate unit testing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Making ResourceByteArrayFileAbstraction itself an interface, extending FileAbstraction. The concrete implementation is then ResourceByteArrayFileAbstractionImpl. (Yes, I know the names are long and could be better.) This allows further decoupling for appropriate unit testing." />
+    <MESSAGE value="Injecting the creator of file abstractions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Injecting the creator of file abstractions." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

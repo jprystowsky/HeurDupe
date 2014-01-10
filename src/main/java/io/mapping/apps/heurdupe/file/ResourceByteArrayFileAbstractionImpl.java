@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Component
-public class ResourceByteArrayFileAbstractionImpl implements ResourceByteArrayFileAbstraction {
+public class ResourceByteArrayFileAbstractionImpl implements ResourceByteArrayFileAbstraction, Comparable<ResourceByteArrayFileAbstraction> {
 	private Resource mResource;
 
 	@Autowired private FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>> mFileTransformationAlgorithm;
@@ -55,5 +55,10 @@ public class ResourceByteArrayFileAbstractionImpl implements ResourceByteArrayFi
 	@Override
 	public void setBacking(final Resource backing) {
 		this.mResource = backing;
+	}
+
+	@Override
+	public int compareTo(final ResourceByteArrayFileAbstraction o) {
+		return this.hashCode() - o.hashCode();
 	}
 }
