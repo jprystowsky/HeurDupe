@@ -112,7 +112,7 @@ public class ResourceByteArrayFileAbstractionImplTest {
 		FileTransformationAlgorithmData<byte[]> fileTransformationAlgorithmData =
 				(FileTransformationAlgorithmData<byte[]>)
 						mock(FileTransformationAlgorithmData.class);
-		when(fileTransformationAlgorithmData.getAbstraction()).thenReturn(testingBytes);
+		when(fileTransformationAlgorithmData.getRepresentation()).thenReturn(testingBytes);
 
 		FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>> fileTransformationAlgorithm =
 				(FileTransformationAlgorithm<byte[], FileTransformationAlgorithmData<byte[]>>)

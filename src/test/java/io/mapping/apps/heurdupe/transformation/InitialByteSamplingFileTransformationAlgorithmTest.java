@@ -140,7 +140,7 @@ public class InitialByteSamplingFileTransformationAlgorithmTest {
 			}
 
 			@Override
-			public byte[] getAbstraction() {
+			public byte[] getRepresentation() {
 				return mBytes;
 			}
 		});
@@ -154,7 +154,7 @@ public class InitialByteSamplingFileTransformationAlgorithmTest {
 		verify(initialByteSample, atLeastOnce()).setBytes(any(byte[].class));
 
 		assertNotNull("Transformation shouldn't be null", sample);
-		assertTrue("Transformation abstraction should equal sampled input bytes", Arrays.equals(sample.getAbstraction(), mExpectedBytes));
-		assertTrue("Byte sample size should be the appropriate size", mSampleSizePropertyValue == sample.getAbstraction().length);
+		assertTrue("Transformation representation should equal sampled input bytes", Arrays.equals(sample.getRepresentation(), mExpectedBytes));
+		assertTrue("Byte sample size should be the appropriate size", mSampleSizePropertyValue == sample.getRepresentation().length);
 	}
 }

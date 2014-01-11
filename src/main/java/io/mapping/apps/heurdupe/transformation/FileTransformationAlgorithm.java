@@ -22,17 +22,17 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * An algorithm for transforming a file's representation of type {@code T} into a data representation of type {@code U}.
- * @param <T> the file's data representation.
- * @param <U> an instance of {@link FileTransformationAlgorithmData} of type {@code T}.
+ * An algorithm for transforming a file's representation of type {@code TRepresentation} into a data representation of type {@code TAlgorithmData}.
+ * @param <TRepresentation> the file's data representation.
+ * @param <TAlgorithmData> an instance of {@link FileTransformationAlgorithmData} of type {@code TRepresentation}.
  */
 
-public interface FileTransformationAlgorithm<T, U extends FileTransformationAlgorithmData<T>> {
+public interface FileTransformationAlgorithm<TRepresentation, TAlgorithmData extends FileTransformationAlgorithmData<TRepresentation>> {
 	public InputStream getInputStream();
 	public void setInputStream(InputStream inputStream);
 	public PropertiesProvider getPropertiesProvider();
 	public void setPropertiesProvider(PropertiesProvider propertiesProvider);
 	public InitialByteSample getInitialByteSample();
 	public void setInitialByteSample(InitialByteSample initialByteSample);
-	public U transform() throws IOException;
+	public TAlgorithmData transform() throws IOException;
 }

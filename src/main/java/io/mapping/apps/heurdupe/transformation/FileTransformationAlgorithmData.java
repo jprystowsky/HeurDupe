@@ -18,13 +18,13 @@ package io.mapping.apps.heurdupe.transformation;
 
 /**
  * Represents the data provided by a {@link FileTransformationAlgorithm}.
- * @param <T> the fundamental data type representing the file.
+ * @param <TRepresentation> the fundamental data type representing the file.
  */
 
-public interface FileTransformationAlgorithmData<T> {
+public interface FileTransformationAlgorithmData<TRepresentation> {
 	/**
 	 * Gets the fundamental data representing the file.
-	 * @return the fundamental backing data, of type {@code T}.
+	 * @return the fundamental backing data, of type {@code TRepresentation}.
 	 */
-	public T getAbstraction();
+	public TRepresentation getRepresentation();
 }

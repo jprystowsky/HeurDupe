@@ -5,11 +5,11 @@ import io.mapping.apps.heurdupe.transformation.FileTransformationAlgorithmData;
 
 import java.io.IOException;
 
-public interface FileAbstraction<T, U> {
-	public FileTransformationAlgorithm<U, FileTransformationAlgorithmData<U>> getFileTransformationAlgorithm();
-	public void setFileTransformationAlgorithm(FileTransformationAlgorithm<U, FileTransformationAlgorithmData<U>> fileTransformationAlgorithm);
+public interface FileAbstraction<TBacking, TRepresentation> {
+	public FileTransformationAlgorithm<TRepresentation, FileTransformationAlgorithmData<TRepresentation>> getFileTransformationAlgorithm();
+	public void setFileTransformationAlgorithm(FileTransformationAlgorithm<TRepresentation, FileTransformationAlgorithmData<TRepresentation>> fileTransformationAlgorithm);
 	public String getPath() throws IOException;
-	public U getAbstraction() throws IOException;
-	public T getBacking();
-	public void setBacking(T backing);
+	public TRepresentation getAbstraction() throws IOException;
+	public TBacking getBacking();
+	public void setBacking(TBacking backing);
 }

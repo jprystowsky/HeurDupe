@@ -38,7 +38,7 @@ public class ResourceByteArrayFileAbstractionImpl implements ResourceByteArrayFi
 
 		try {
 			mFileTransformationAlgorithm.setInputStream(stream);
-			representation = mFileTransformationAlgorithm.transform().getAbstraction();
+			representation = mFileTransformationAlgorithm.transform().getRepresentation();
 		} catch (IOException e) {
 			throw e;
 		} finally {

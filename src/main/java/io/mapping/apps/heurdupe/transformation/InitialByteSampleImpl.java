@@ -55,7 +55,7 @@ public class InitialByteSampleImpl implements InitialByteSample, Comparable<Init
 	}
 
 	@Override
-	public byte[] getAbstraction() {
+	public byte[] getRepresentation() {
 		return this.bytes;
 	}
 }

@@ -19,6 +19,6 @@ package io.mapping.apps.heurdupe.file;
 import java.io.IOException;
 import java.util.NavigableSet;
 
-public interface FileAbstractionProvider <U, V, T extends FileAbstraction<U, V>> {
-	public NavigableSet<T> getFileAbstractions(T startFile) throws IOException;
+public interface FileAbstractionProvider <TBacking, TRepresentation, TAbstraction extends FileAbstraction<TBacking, TRepresentation>> {
+	public NavigableSet<TAbstraction> getFileAbstractions(TAbstraction startFile) throws IOException;
 }

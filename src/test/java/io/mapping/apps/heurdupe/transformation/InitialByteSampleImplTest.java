@@ -99,6 +99,6 @@ public class InitialByteSampleImplTest {
 		byte[] newBytes = new byte[] { 0 };
 
 		mInitialByteSample.setBytes(newBytes);
-		assertEquals("Bytes should be equal", newBytes, mInitialByteSample.getAbstraction());
+		assertEquals("Bytes should be equal", newBytes, mInitialByteSample.getRepresentation());
 	}
 }

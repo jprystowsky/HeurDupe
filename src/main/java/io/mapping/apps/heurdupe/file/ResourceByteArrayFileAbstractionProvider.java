@@ -21,7 +21,7 @@ import org.springframework.core.io.Resource;
 import java.io.IOException;
 import java.util.NavigableSet;
 
-public interface ResourceByteArrayFileAbstractionProvider<T extends ResourceByteArrayFileAbstraction> extends FileAbstractionProvider<Resource, byte[], T> {
+public interface ResourceByteArrayFileAbstractionProvider<TAbstraction extends ResourceByteArrayFileAbstraction> extends FileAbstractionProvider<Resource, byte[], TAbstraction> {
 	@Override
-	NavigableSet<T> getFileAbstractions(T startFile) throws IOException;
+	NavigableSet<TAbstraction> getFileAbstractions(TAbstraction startFile) throws IOException;
 }

@@ -29,8 +29,8 @@ import java.util.*;
 
 @Component
 @Scope("prototype")
-public class RecursiveFileSystemResourceByteArrayFileAbstractionProvider<T extends ResourceByteArrayFileAbstraction> implements ResourceByteArrayFileAbstractionProvider<T> {
-	private NavigableSet<T> mFiles = new TreeSet<>();
+public class RecursiveFileSystemResourceByteArrayFileAbstractionProvider<TAbstraction extends ResourceByteArrayFileAbstraction> implements ResourceByteArrayFileAbstractionProvider<TAbstraction> {
+	private NavigableSet<TAbstraction> mFiles = new TreeSet<>();
 	@Autowired private FileAbstractionCreator<Resource, byte[], ResourceByteArrayFileAbstraction> mFileAbstractionCreator;
 
 	public FileAbstractionCreator<Resource, byte[], ResourceByteArrayFileAbstraction> getFileAbstractionCreator() {
@@ -42,7 +42,8 @@ public class RecursiveFileSystemResourceByteArrayFileAbstractionProvider<T exten
 	}
 
 	@Override
-	public NavigableSet<T> getFileAbstractions(final T startFile) throws IOException {
+	@SuppressWarnings("unchecked")
+	public NavigableSet<TAbstraction> getFileAbstractions(final TAbstraction startFile) throws IOException {
 		if (startFile == null) {
 			return mFiles;
 		}
@@ -61,7 +62,7 @@ public class RecursiveFileSystemResourceByteArrayFileAbstractionProvider<T exten
 
 		while ((thisFile = fileQueue.poll()) != null) {
 			if (thisFile.isFile()) {
-				final T fileAbstraction = (T) mFileAbstractionCreator.createFileAbstraction();
+				final TAbstraction fileAbstraction = (TAbstraction) mFileAbstractionCreator.createFileAbstraction();
 				fileAbstraction.setBacking(resourceLoader.getResource("file:" + thisFile.getAbsolutePath()));
 				mFiles.add(fileAbstraction);
 			} else if (thisFile.isDirectory()) {
