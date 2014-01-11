@@ -19,21 +19,22 @@ package io.mapping.apps.heurdupe.container;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 @Component
 public class IntegerResourceByteArrayInMemoryFileAbstractionContainerProvider implements FileAbstractionContainerProvider<Integer, ResourceByteArrayInMemoryFileAbstractionContainer> {
-	private final Map<Integer, ResourceByteArrayInMemoryFileAbstractionContainer> containerMap = new HashMap<>();
+	private final Map<Integer, ResourceByteArrayInMemoryFileAbstractionContainer> mContainerMap = new HashMap<>();
 
 	@Override
 	public ResourceByteArrayInMemoryFileAbstractionContainer getContainer(final Integer integer) {
 		if (integer == null) {
 			// Speedup for bad input
 			return null;
-		} else if (containerMap.size() >= 1) {
+		} else if (mContainerMap.size() >= 1) {
 			// Main case
-			if (containerMap.keySet().contains(integer)) {
-				return containerMap.get(integer);
+			if (mContainerMap.keySet().contains(integer)) {
+				return mContainerMap.get(integer);
 			} else {
 				return createNewContainer(integer);
 			}
@@ -43,8 +44,27 @@ public class IntegerResourceByteArrayInMemoryFileAbstractionContainerProvider im
 		}
 	}
 
+	@Override
+	public int size() {
+		return mContainerMap.size();
+	}
+
+	@Override
+	public void addContainer(final Integer reduction, final ResourceByteArrayInMemoryFileAbstractionContainer container) {
+		if (container != null) {
+			if (!mContainerMap.keySet().contains(reduction)) {
+				mContainerMap.put(reduction, container);
+			}
+		}
+	}
+
+	@Override
+	public Iterator<Integer> getReductionIterator() {
+		return mContainerMap.keySet().iterator();
+	}
+
 	private ResourceByteArrayInMemoryFileAbstractionContainer createNewContainer(final Integer integer) {
-		containerMap.put(integer, new ResourceByteArrayInMemoryFileAbstractionContainer());
-		return containerMap.get(integer);
+		mContainerMap.put(integer, new ResourceByteArrayInMemoryFileAbstractionContainer());
+		return mContainerMap.get(integer);
 	}
 }

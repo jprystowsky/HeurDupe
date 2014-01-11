@@ -16,6 +16,11 @@
 
 package io.mapping.apps.heurdupe.container;
 
+import java.util.Iterator;
+
 public interface FileAbstractionContainerProvider<TReduction, TContainer> {
 	public TContainer getContainer(TReduction reduction);
+	public int size();
+	public void addContainer(TReduction reduction, TContainer container);
+	public Iterator<TReduction> getReductionIterator();
 }

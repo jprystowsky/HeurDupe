@@ -20,12 +20,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.test.annotation.Repeat;
 
+import java.util.Iterator;
 import java.util.Random;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.mockito.Mockito.mock;
 
 public class IntegerResourceByteArrayInMemoryFileAbstractionContainerProviderTest {
 	private IntegerResourceByteArrayInMemoryFileAbstractionContainerProvider mProvider;
@@ -73,5 +75,33 @@ public class IntegerResourceByteArrayInMemoryFileAbstractionContainerProviderTes
 		final ResourceByteArrayInMemoryFileAbstractionContainer differentContainer = mProvider.getContainer(randomInt);
 
 		assertThat("Containers for the same representation should be the same", container, is(sameInstance(differentContainer)));
+	}
+
+	@Test
+	public void shouldReturnSize() throws Exception {
+		assertThat("Size should be nonnegative", mProvider.size() >= 0);
+	}
+
+	@Test
+	public void shouldNotAddNullContainer() throws Exception {
+		mProvider.addContainer(0, null);
+
+		assertThat("Should not contain null container", mProvider.size() == 0);
+	}
+
+	@Test
+	public void shouldAddNonNullContainerIfNotContained() throws Exception {
+		final ResourceByteArrayInMemoryFileAbstractionContainer container = mock(ResourceByteArrayInMemoryFileAbstractionContainer.class);
+
+		mProvider.addContainer(0, container);
+
+		assertThat("Should contain non-null container", mProvider.size() == 1);
+	}
+
+	@Test
+	public void shouldReturnIterator() throws Exception {
+		Iterator<Integer> iterator = mProvider.getReductionIterator();
+
+		assertThat("Iterator should not be null", iterator, is(notNullValue()));
 	}
 }
