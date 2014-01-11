@@ -20,5 +20,5 @@ import java.io.IOException;
 import java.util.NavigableSet;
 
 public interface FileAbstractionProvider <U, V, T extends FileAbstraction<U, V>> {
-	public NavigableSet<T> getFiles(T startFile) throws IOException;
+	public NavigableSet<T> getFileAbstractions(T startFile) throws IOException;
 }

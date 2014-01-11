@@ -23,5 +23,5 @@ import java.util.NavigableSet;
 
 public interface ResourceByteArrayFileAbstractionProvider<T extends ResourceByteArrayFileAbstraction> extends FileAbstractionProvider<Resource, byte[], T> {
 	@Override
-	NavigableSet<T> getFiles(T startFile) throws IOException;
+	NavigableSet<T> getFileAbstractions(T startFile) throws IOException;
 }

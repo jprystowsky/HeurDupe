@@ -50,7 +50,7 @@ public class RecursiveFileSystemResourceByteArrayFileAbstractionProviderTest {
 
 	@Test
 	public void shouldReturnEmptySetForNullStartFile() throws Exception {
-		Set<ResourceByteArrayFileAbstraction> files = mFileAbstractionProvider.getFiles(null);
+		Set<ResourceByteArrayFileAbstraction> files = mFileAbstractionProvider.getFileAbstractions(null);
 
 		assertNotNull("Should receive empty set and not null for null start file", files);
 		assertEquals("Size of set for null file should be zero", 0, files.size());
@@ -69,7 +69,7 @@ public class RecursiveFileSystemResourceByteArrayFileAbstractionProviderTest {
 		ResourceByteArrayFileAbstraction mockFileAbstraction = mock(ResourceByteArrayFileAbstraction.class);
 		when(mockFileAbstraction.getBacking()).thenReturn(mockResource);
 
-		NavigableSet<ResourceByteArrayFileAbstraction> files = mFileAbstractionProvider.getFiles(mockFileAbstraction);
+		NavigableSet<ResourceByteArrayFileAbstraction> files = mFileAbstractionProvider.getFileAbstractions(mockFileAbstraction);
 
 		assertNotNull("Set of files should not be null", files);
 		assertEquals("Set of files should contain one element", 1, files.size());
@@ -98,7 +98,7 @@ public class RecursiveFileSystemResourceByteArrayFileAbstractionProviderTest {
 		when(mockCreator.createFileAbstraction()).thenReturn(mockFileAbstraction);
 
 		mFileAbstractionProvider.setFileAbstractionCreator(mockCreator);
-		NavigableSet<ResourceByteArrayFileAbstraction> files = mFileAbstractionProvider.getFiles(mockFileAbstraction);
+		NavigableSet<ResourceByteArrayFileAbstraction> files = mFileAbstractionProvider.getFileAbstractions(mockFileAbstraction);
 
 		assertNotNull("Set of files should not be null", files);
 		assertEquals("Set of files should contain one element", 1, files.size());
@@ -135,7 +135,7 @@ public class RecursiveFileSystemResourceByteArrayFileAbstractionProviderTest {
 		when(mockCreator.createFileAbstraction()).thenReturn(mockFileAbstraction);
 
 		mFileAbstractionProvider.setFileAbstractionCreator(mockCreator);
-		NavigableSet<ResourceByteArrayFileAbstraction> files = mFileAbstractionProvider.getFiles(mockFileAbstraction);
+		NavigableSet<ResourceByteArrayFileAbstraction> files = mFileAbstractionProvider.getFileAbstractions(mockFileAbstraction);
 
 		assertNotNull("Set of files should not be null", files);
 		assertEquals("Set of files should contain one element", 1, files.size());

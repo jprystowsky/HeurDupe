@@ -42,7 +42,7 @@ public class RecursiveFileSystemResourceByteArrayFileAbstractionProvider<T exten
 	}
 
 	@Override
-	public NavigableSet<T> getFiles(final T startFile) throws IOException {
+	public NavigableSet<T> getFileAbstractions(final T startFile) throws IOException {
 		if (startFile == null) {
 			return mFiles;
 		}
