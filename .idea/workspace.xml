@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4925524f-4539-46f7-9680-86544ee0f322" name="Default" comment="Creating a working main() for now.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/InMemoryFileAbstractionContainerTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionProvider.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/RecursiveFileSystemResourceByteArrayFileAbstractionProvider.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/RecursiveFileSystemResourceByteArrayFileAbstractionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/RecursiveFileSystemResourceByteArrayFileAbstractionProviderTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/RecursiveFileSystemResourceByteArrayFileAbstractionProviderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionProvider.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionContainer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/InMemoryFileAbstractionContainer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/InMemoryFileAbstractionContainer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HeurDupe.iws" />
@@ -133,10 +133,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Application.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="116" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="703">
+            <state line="29" column="116" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileAbstractionContainer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InMemoryFileAbstractionContainer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/InMemoryFileAbstractionContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="18" selection-start="134" selection-end="134" vertical-scroll-proportion="0.08534851" vertical-offset="0" max-vertical-offset="703">
               <folding />
             </state>
           </provider>
@@ -184,6 +202,10 @@
         <option value="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/RecursiveFileSystemResourceByteArrayFileAbstractionProvider.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionContainer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/InMemoryFileAbstractionContainer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainer.java" />
       </list>
     </option>
   </component>
@@ -996,7 +1018,7 @@
       <workItem from="1388762798682" duration="595000" />
       <workItem from="1388978289755" duration="2938000" />
       <workItem from="1389320953074" duration="17000" />
-      <workItem from="1389321006446" duration="8893000" />
+      <workItem from="1389321006446" duration="9808000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1386440696362</created>
@@ -1018,11 +1040,15 @@
       <created>1389388441060</created>
       <updated>1389388441060</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Renaming method to be clearer in its function.">
+      <created>1389449025346</created>
+      <updated>1389449025346</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41324000" />
+    <option name="totallyTimeSpent" value="42239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1111" extended-state="6" />
@@ -1050,7 +1076,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30830672" sideWeight="0.6703663" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28263003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28263003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="FLOATING" visible="true" weight="0.32992172" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="174" y="143" width="1503" height="821" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1080,7 +1106,8 @@
     <MESSAGE value="Making ResourceByteArrayFileAbstraction itself an interface, extending FileAbstraction. The concrete implementation is then ResourceByteArrayFileAbstractionImpl. (Yes, I know the names are long and could be better.) This allows further decoupling for appropriate unit testing." />
     <MESSAGE value="Injecting the creator of file abstractions." />
     <MESSAGE value="Adding the notion of file abstractions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding the notion of file abstractions." />
+    <MESSAGE value="Renaming method to be clearer in its function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renaming method to be clearer in its function." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1090,20 +1117,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/RecursiveFileSystemResourceByteArrayFileAbstractionProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1532" selection-end="1532" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="615">
-          <folding>
-            <element signature="e#0#6338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="530" selection-end="530" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="450" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/properties/SpringStaticPropertiesProviderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="92" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="750" />
@@ -1164,16 +1177,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ByteIntFileAbstractionReducerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="52" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.40336135" vertical-offset="0" max-vertical-offset="595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/InMemoryFileAbstractionContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="247" selection-end="247" vertical-scroll-proportion="0.10084034" vertical-offset="0" max-vertical-offset="595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/InMemoryFileAbstractionContainerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="127" selection-start="3691" selection-end="3691" vertical-scroll-proportion="2.2689075" vertical-offset="0" max-vertical-offset="1485" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HeurDupe.iml">
@@ -1389,13 +1392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstraction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="636" selection-end="636" vertical-scroll-proportion="0.21337126" vertical-offset="0" max-vertical-offset="703">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="22" selection-start="211" selection-end="211" vertical-scroll-proportion="0.08534851" vertical-offset="0" max-vertical-offset="703">
@@ -1414,30 +1410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="4" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/algorithm/InitialByteSample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="793" selection-end="793" vertical-scroll-proportion="0.19203414" vertical-offset="0" max-vertical-offset="703">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/algorithm/FileTransformationAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="13" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="703">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="119" selection-start="700" selection-end="700" vertical-scroll-proportion="-0.06521739" vertical-offset="165" max-vertical-offset="855">
-          <folding>
-            <element signature="e#1661#1662#0" expanded="false" />
-            <element signature="e#1684#1685#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1471,9 +1443,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/algorithm/InitialByteSample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="793" selection-end="793" vertical-scroll-proportion="0.19203414" vertical-offset="0" max-vertical-offset="703">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/algorithm/FileTransformationAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="13" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="703">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="116" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="703">
+        <state line="29" column="116" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstraction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="16" selection-start="636" selection-end="636" vertical-scroll-proportion="0.22865854" vertical-offset="0" max-vertical-offset="656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="49" selection-start="2748" selection-end="2748" vertical-scroll-proportion="1.3981043" vertical-offset="0" max-vertical-offset="1500">
+          <folding>
+            <element signature="e#1055#1085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="119" selection-start="700" selection-end="700" vertical-scroll-proportion="0.1866252" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="823" selection-end="823" vertical-scroll-proportion="0.20579268" vertical-offset="0" max-vertical-offset="656">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/InMemoryFileAbstractionContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="18" selection-start="134" selection-end="134" vertical-scroll-proportion="0.08534851" vertical-offset="0" max-vertical-offset="703">
           <folding />
         </state>
       </provider>

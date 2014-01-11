@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.Resource;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
@@ -20,21 +21,22 @@ import static org.mockito.Mockito.mock;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(loader = AnnotationConfigContextLoader.class)
-public class InMemoryFileAbstractionContainerTest {
+public class ResourceByteArrayInMemoryFileAbstractionContainerTest {
 	@Configuration
 	static class ContextConfiguration {
 		@Bean
-		public FileAbstraction fileAbstraction() {
+		@SuppressWarnings("unchecked")
+		public FileAbstraction<Resource, byte[]> fileAbstraction() {
 			return mock(FileAbstraction.class);
 		}
 	}
 
-	private InMemoryFileAbstractionContainer mInMemoryFileAbstractionContainer;
-	@Autowired private FileAbstraction mFileAbstraction;
+	private ResourceByteArrayInMemoryFileAbstractionContainer mInMemoryFileAbstractionContainer;
+	@Autowired private FileAbstraction<Resource, byte[]> mFileAbstraction;
 
 	@Before
 	public void setUp() throws Exception {
-		mInMemoryFileAbstractionContainer = new InMemoryFileAbstractionContainer();
+		mInMemoryFileAbstractionContainer = new ResourceByteArrayInMemoryFileAbstractionContainer();
 	}
 
 	@Test
@@ -60,7 +62,7 @@ public class InMemoryFileAbstractionContainerTest {
 
 	@Test
 	public void shouldReturnIteratorWhenEmpty() throws Exception {
-		Iterator<FileAbstraction> fileAbstractionIterator = mInMemoryFileAbstractionContainer.getIterator();
+		Iterator<FileAbstraction<Resource, byte[]>> fileAbstractionIterator = mInMemoryFileAbstractionContainer.getIterator();
 
 		assertNotNull("Iterator shouldn't be null", fileAbstractionIterator);
 	}
@@ -72,7 +74,7 @@ public class InMemoryFileAbstractionContainerTest {
 			mInMemoryFileAbstractionContainer.addFile(mock(FileAbstraction.class));
 		}
 
-		Iterator<FileAbstraction> fileAbstractionIterator = mInMemoryFileAbstractionContainer.getIterator();
+		Iterator<FileAbstraction<Resource, byte[]>> fileAbstractionIterator = mInMemoryFileAbstractionContainer.getIterator();
 
 		assertNotNull("Iterator shouldn't be null", fileAbstractionIterator);
 		assertTrue("Iterator should have next element", fileAbstractionIterator.hasNext());
