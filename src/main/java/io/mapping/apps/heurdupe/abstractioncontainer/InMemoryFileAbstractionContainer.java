@@ -1,4 +1,6 @@
-package io.mapping.apps.heurdupe.file;
+package io.mapping.apps.heurdupe.abstractioncontainer;
+
+import io.mapping.apps.heurdupe.file.FileAbstraction;
 
 import java.util.HashSet;
 import java.util.Iterator;

@@ -1,5 +1,6 @@
 package io.mapping.apps.heurdupe.file;
 
+import io.mapping.apps.heurdupe.abstractioncontainer.ResourceByteArrayInMemoryFileAbstractionContainer;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

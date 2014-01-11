@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.mapping.apps.heurdupe.algorithm;
+package io.mapping.apps.heurdupe.transformation;
 
 import org.springframework.stereotype.Component;
 

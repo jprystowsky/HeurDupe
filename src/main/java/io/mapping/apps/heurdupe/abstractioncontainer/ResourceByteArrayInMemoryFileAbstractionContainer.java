@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Jacob Miles Prystowsky
+ * Copyright 2014 Jacob Miles Prystowsky
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,17 +14,13 @@
  * limitations under the License.
  */
 
-package io.mapping.apps.heurdupe.algorithm;
+package io.mapping.apps.heurdupe.abstractioncontainer;
 
-/**
- * Represents the data provided by a {@link FileTransformationAlgorithm}.
- * @param <T> the fundamental data type representing the file.
- */
+import org.springframework.context.annotation.Scope;
+import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Component;
 
-public interface FileTransformationAlgorithmData<T> {
-	/**
-	 * Gets the fundamental data representing the file.
-	 * @return the fundamental backing data, of type {@code T}.
-	 */
-	public T getAbstraction();
+@Component
+@Scope("prototype")
+public class ResourceByteArrayInMemoryFileAbstractionContainer extends InMemoryFileAbstractionContainer<Resource, byte[]> {
 }

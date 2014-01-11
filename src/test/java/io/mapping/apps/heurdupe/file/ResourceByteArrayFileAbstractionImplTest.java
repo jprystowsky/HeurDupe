@@ -16,8 +16,8 @@
 
 package io.mapping.apps.heurdupe.file;
 
-import io.mapping.apps.heurdupe.algorithm.FileTransformationAlgorithm;
-import io.mapping.apps.heurdupe.algorithm.FileTransformationAlgorithmData;
+import io.mapping.apps.heurdupe.transformation.FileTransformationAlgorithm;
+import io.mapping.apps.heurdupe.transformation.FileTransformationAlgorithmData;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

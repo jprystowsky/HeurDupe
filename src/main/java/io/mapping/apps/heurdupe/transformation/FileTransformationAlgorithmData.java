@@ -14,14 +14,17 @@
  * limitations under the License.
  */
 
-package io.mapping.apps.heurdupe.algorithm;
+package io.mapping.apps.heurdupe.transformation;
 
 /**
- * A type of {@link FileTransformationAlgorithmData} representing a sequence of initial bytes
- * in a file's data.
+ * Represents the data provided by a {@link FileTransformationAlgorithm}.
+ * @param <T> the fundamental data type representing the file.
  */
 
-public interface InitialByteSample extends FileTransformationAlgorithmData<byte[]> {
-	public byte[] getBytes();
-	public void setBytes(byte[] bytes);
+public interface FileTransformationAlgorithmData<T> {
+	/**
+	 * Gets the fundamental data representing the file.
+	 * @return the fundamental backing data, of type {@code T}.
+	 */
+	public T getAbstraction();
 }

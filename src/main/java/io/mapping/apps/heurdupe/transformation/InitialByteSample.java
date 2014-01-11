@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Jacob Miles Prystowsky
+ * Copyright 2013 Jacob Miles Prystowsky
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-package io.mapping.apps.heurdupe.file;
+package io.mapping.apps.heurdupe.transformation;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.core.io.Resource;
-import org.springframework.stereotype.Component;
+/**
+ * A type of {@link FileTransformationAlgorithmData} representing a sequence of initial bytes
+ * in a file's data.
+ */
 
-@Component
-@Scope("prototype")
-public class ResourceByteArrayInMemoryFileAbstractionContainer extends InMemoryFileAbstractionContainer<Resource, byte[]> {
+public interface InitialByteSample extends FileTransformationAlgorithmData<byte[]> {
+	public byte[] getBytes();
+	public void setBytes(byte[] bytes);
 }
