@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4925524f-4539-46f7-9680-86544ee0f322" name="Default" comment="Creating a working main() for now.">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/algorithm/FileTransformationAlgorithm.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/transformation/FileTransformationAlgorithm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/algorithm/FileTransformationAlgorithmData.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/transformation/FileTransformationAlgorithmData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/algorithm/InitialByteSample.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/transformation/InitialByteSample.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/algorithm/InitialByteSampleImpl.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/transformation/InitialByteSampleImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/algorithm/InitialByteSamplingFileTransformationAlgorithm.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/transformation/InitialByteSamplingFileTransformationAlgorithm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionContainer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/abstractioncontainer/FileAbstractionContainer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/InMemoryFileAbstractionContainer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/abstractioncontainer/InMemoryFileAbstractionContainer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/abstractioncontainer/ResourceByteArrayInMemoryFileAbstractionContainer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/algorithm/InitialByteSampleImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/transformation/InitialByteSampleImplTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/algorithm/InitialByteSamplingFileTransformationAlgorithmTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/transformation/InitialByteSamplingFileTransformationAlgorithmTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/abstractioncontainer/FileAbstractionContainer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/container/FileAbstractionContainer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/abstractioncontainer/InMemoryFileAbstractionContainer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/container/InMemoryFileAbstractionContainer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/abstractioncontainer/ResourceByteArrayInMemoryFileAbstractionContainer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/container/ResourceByteArrayInMemoryFileAbstractionContainer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ByteIntFileAbstractionReducer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/reduction/ByteIntFileAbstractionReducer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstractionReducer.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/reduction/FileAbstractionReducer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ByteIntFileAbstractionReducerTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/reduction/ByteIntFileAbstractionReducerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainerTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/container/ResourceByteArrayInMemoryFileAbstractionContainerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstraction.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/FileAbstraction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstraction.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstraction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionImpl.java" afterPath="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainerTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HeurDupe.iws" />
@@ -119,7 +111,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java" line="29" class="io.mapping.apps.heurdupe.Application" package="io.mapping.apps.heurdupe">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java" line="30" class="io.mapping.apps.heurdupe.Application" package="io.mapping.apps.heurdupe">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -147,16 +139,25 @@
       <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="116" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+            <state line="30" column="116" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResourceByteArrayFileAbstractionImplTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionImplTest.java">
+      <file leaf-file-name="ByteIntFileAbstractionReducer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/reduction/ByteIntFileAbstractionReducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="64" selection-start="3261" selection-end="3261" vertical-scroll-proportion="0.33231708" vertical-offset="457" max-vertical-offset="1845">
+            <state line="7" column="13" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileAbstractionReducer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/reduction/FileAbstractionReducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="17" selection-start="62" selection-end="62" vertical-scroll-proportion="0.04573171" vertical-offset="0" max-vertical-offset="656">
               <folding />
             </state>
           </provider>
@@ -208,6 +209,7 @@
         <option value="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainer.java" />
         <option value="$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/reduction/FileAbstractionReducer.java" />
       </list>
     </option>
   </component>
@@ -511,6 +513,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="reduction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HeurDupe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HeurDupe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heurdupe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="file" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -615,67 +647,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="reduction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HeurDupe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HeurDupe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heurdupe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="file" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HeurDupe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HeurDupe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="heurdupe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="transformation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HeurDupe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HeurDupe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="heurdupe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="abstractioncontainer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -728,6 +730,8 @@
       <recent name="io.mapping.apps.heurdupe" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="io.mapping.apps.heurdupe.reduction" />
+      <recent name="io.mapping.apps.heurdupe.container" />
       <recent name="io.mapping.apps.heurdupe.properties" />
       <recent name="io.mapping.apps.heurdupe" />
       <recent name="io.mapping.apps.heurdupe.file" />
@@ -1050,7 +1054,7 @@
       <workItem from="1388762798682" duration="595000" />
       <workItem from="1388978289755" duration="2938000" />
       <workItem from="1389320953074" duration="17000" />
-      <workItem from="1389321006446" duration="10203000" />
+      <workItem from="1389321006446" duration="10369000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1386440696362</created>
@@ -1080,15 +1084,19 @@
       <created>1389449941683</created>
       <updated>1389449941683</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Renaming packages for consistency.">
+      <created>1389450345618</created>
+      <updated>1389450345618</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42634000" />
+    <option name="totallyTimeSpent" value="42800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1111" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875368" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1111,7 +1119,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14569536" sideWeight="0.6703663" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30830672" sideWeight="0.6703663" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30830672" sideWeight="0.6703663" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28263003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="FLOATING" visible="true" weight="0.32992172" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="174" y="143" width="1503" height="821" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1144,7 +1152,8 @@
     <MESSAGE value="Adding the notion of file abstractions." />
     <MESSAGE value="Renaming method to be clearer in its function." />
     <MESSAGE value="Making the in memory container better structured." />
-    <option name="LAST_COMMIT_MESSAGE" value="Making the in memory container better structured." />
+    <MESSAGE value="Renaming packages for consistency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renaming packages for consistency." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1154,11 +1163,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/properties/SpringStaticPropertiesProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="92" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="750" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/properties/SpringStaticPropertiesProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="34" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="690" />
@@ -1211,7 +1215,7 @@
         <state line="43" column="18" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.43529412" vertical-offset="86" max-vertical-offset="795" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ByteIntFileAbstractionReducerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/reduction/ByteIntFileAbstractionReducerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="52" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.40336135" vertical-offset="0" max-vertical-offset="595" />
       </provider>
@@ -1415,13 +1419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/file/ByteIntFileAbstractionReducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.10668563" vertical-offset="0" max-vertical-offset="703">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/ApplicationConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="798" selection-end="798" vertical-scroll-proportion="0.36273116" vertical-offset="0" max-vertical-offset="703">
@@ -1487,11 +1484,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayInMemoryFileAbstractionContainerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/container/ResourceByteArrayInMemoryFileAbstractionContainerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="49" selection-start="2748" selection-end="2748" vertical-scroll-proportion="1.3981043" vertical-offset="0" max-vertical-offset="1500">
           <folding>
-            <element signature="e#1159#1189#0" expanded="true" />
+            <element signature="e#1207#1237#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1503,7 +1500,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/abstractioncontainer/ResourceByteArrayInMemoryFileAbstractionContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/container/ResourceByteArrayInMemoryFileAbstractionContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="17" selection-start="823" selection-end="823" vertical-scroll-proportion="0.20579268" vertical-offset="0" max-vertical-offset="656">
           <folding>
@@ -1519,14 +1516,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/abstractioncontainer/FileAbstractionContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/container/FileAbstractionContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="0.2347084" vertical-offset="0" max-vertical-offset="703">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/abstractioncontainer/InMemoryFileAbstractionContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/container/InMemoryFileAbstractionContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="18" selection-start="134" selection-end="134" vertical-scroll-proportion="0.08534851" vertical-offset="0" max-vertical-offset="703">
           <folding />
@@ -1535,14 +1532,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="116" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+        <state line="30" column="116" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/io/mapping/apps/heurdupe/file/ResourceByteArrayFileAbstractionImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="64" selection-start="3261" selection-end="3261" vertical-scroll-proportion="0.33231708" vertical-offset="457" max-vertical-offset="1845">
+        <state line="76" column="64" selection-start="3261" selection-end="3261" vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1845">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/reduction/ByteIntFileAbstractionReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/mapping/apps/heurdupe/reduction/FileAbstractionReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="62" selection-end="62" vertical-scroll-proportion="0.04573171" vertical-offset="0" max-vertical-offset="656">
           <folding />
         </state>
       </provider>

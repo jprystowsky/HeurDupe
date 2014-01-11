@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package io.mapping.apps.heurdupe.file;
+package io.mapping.apps.heurdupe.reduction;
 
+import io.mapping.apps.heurdupe.reduction.ByteIntFileAbstractionReducer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package io.mapping.apps.heurdupe.abstractioncontainer;
+package io.mapping.apps.heurdupe.container;
 
 import io.mapping.apps.heurdupe.file.FileAbstraction;
 

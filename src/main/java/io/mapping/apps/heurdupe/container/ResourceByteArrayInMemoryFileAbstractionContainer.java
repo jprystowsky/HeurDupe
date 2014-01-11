@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.mapping.apps.heurdupe.abstractioncontainer;
+package io.mapping.apps.heurdupe.container;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.core.io.Resource;

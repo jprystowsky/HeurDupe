@@ -1,4 +1,4 @@
-package io.mapping.apps.heurdupe.file;
+package io.mapping.apps.heurdupe.reduction;
 
 import org.springframework.stereotype.Component;
 
