@@ -16,6 +16,8 @@
 
 package io.mapping.apps.heurdupe.file;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.core.io.FileSystemResourceLoader;
@@ -32,6 +34,7 @@ import java.util.*;
 public class RecursiveFileSystemResourceByteArrayFileAbstractionProvider<TAbstraction extends ResourceByteArrayFileAbstraction> implements ResourceByteArrayFileAbstractionProvider<TAbstraction> {
 	private NavigableSet<TAbstraction> mFiles = new TreeSet<>();
 	@Autowired private FileAbstractionCreator<Resource, byte[], ResourceByteArrayFileAbstraction> mFileAbstractionCreator;
+	private Logger mLogger = LoggerFactory.getLogger(RecursiveFileSystemResourceByteArrayFileAbstractionProvider.class);
 
 	public FileAbstractionCreator<Resource, byte[], ResourceByteArrayFileAbstraction> getFileAbstractionCreator() {
 		return mFileAbstractionCreator;
@@ -63,6 +66,7 @@ public class RecursiveFileSystemResourceByteArrayFileAbstractionProvider<TAbstra
 		while ((thisFile = fileQueue.poll()) != null) {
 			if (thisFile.isFile()) {
 				final TAbstraction fileAbstraction = (TAbstraction) mFileAbstractionCreator.createFileAbstraction();
+				mLogger.info(String.format("Trying to read in: '%s'", "file:" + thisFile.getAbsolutePath()));
 				fileAbstraction.setBacking(resourceLoader.getResource("file:" + thisFile.getAbsolutePath()));
 				mFiles.add(fileAbstraction);
 			} else if (thisFile.isDirectory()) {
